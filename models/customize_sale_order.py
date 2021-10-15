@@ -11,7 +11,5 @@ class CustomizeSalOrder(models.Model):
     ], string='Loại đơn hàng', default='Bình thường')
     dia_chi = fields.Char('Địa chỉ', size=400)
     district_id = fields.Many2one('dk.add.district', string='District', required=True)
-    city_id = fields.Many2one('dk.add.city', string='City',
-                              related='district_id.city_id')
-    country_id = fields.Many2one('res.country', string='Country',
-                                 related='district_id.country_id')
+    city_id = fields.Many2one('dk.add.city', string='City')
+    country_id = fields.Many2one('res.country', string='Country')

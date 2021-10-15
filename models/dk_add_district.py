@@ -7,5 +7,4 @@ class AddDistrict(models.Model):
     code = fields.Char(string='Code', size=11, required=True)
     name = fields.Char(string='Name', size=128, required=True)
     city_id = fields.Many2one('dk.add.city', string='City', required=True)
-    country_id = fields.Many2one('res.country', string='Country',
-                                 related='city_id.country_id')
+    country_id = fields.Many2one('res.country', string='Country')

@@ -7,7 +7,7 @@
     "depends": ["base", "sale"],
     "data": [
         "views/customize_sale_order_view.xml",
-        # "views/add_location_fields_to_sale_order.xml"
+        "views/create_location.xml"
     ],
     "license": "AGPL-3",
     "installable": True,

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="create_location_tree" model="ir.ui.view">
+            <field name="name">create.location.tree</field>
+            <field name="model">sale.order</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="create location">
+                    <field name="country_id"/>
+                    <field name="district_id"/>
+                    <field name="city_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="create_location_act" model="ir.actions.act_window">
+            <field name="name">create.location.act</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">sale.order</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="create_location_tree"/>
+        </record>
+
+        <menuitem id="create_location_menu" name="Create location" sequence="1"/>
+        <menuitem id="create_location_menu_item" name="create location menu item"
+                  parent="create_location_menu"
+                  action="create_location_act" sequence="1"/>
+    </data>
+</odoo>
