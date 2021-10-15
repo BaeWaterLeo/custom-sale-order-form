@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="view_sale_order_add_dc_ldh" model="ir.ui.view">
+            <field name="name">sale.order.add.dc.ldh.form</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                <field name="partner_id" position="after">
+                    <field name="loai_don_hang"/>
+<!--                    <field name="country_id" string="Country"/>-->
+<!--                    <field name="city_id" string="City"/>-->
+<!--                    <field name="district_id" string="District"/>-->
+                    <field name="dia_chi" string="Dia chi"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>
