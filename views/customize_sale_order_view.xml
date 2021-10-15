@@ -8,9 +8,11 @@
             <field name="arch" type="xml">
                 <field name="partner_id" position="after">
                     <field name="loai_don_hang"/>
-<!--                    <field name="country_id" string="Country"/>-->
-<!--                    <field name="city_id" string="City"/>-->
-<!--                    <field name="district_id" string="District"/>-->
+                    <field name="country_id" string="Country"/>
+                    <field name="city_id" string="City"
+                           domain="[('country_id', '=', country_id)]"/>
+                    <field name="district_id" string="District"
+                           domain="[('city_id', '=', city_id)]"/>
                     <field name="dia_chi" string="Dia chi"/>
                 </field>
             </field>
