@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<odoo>
+    <template id="sale_report_inherit" inherit_id="sale.report_saleorder_document">
+        <xpath expr="//div[@class='row mt32 mb32']" position="after">
+            <div class="row mt32 mb32" id="test_inherit">
+                <div class="col-auto col-3 mw-100 mb-2">
+                    <strong>Loai don hang:</strong>
+                    <span t-field="doc.loai_don_hang"/>
+                </div>
+                <div class="col-auto col-3 mw-100 mb-2">
+                    <strong>Address:</strong>
+                    <div t-field="doc.country_id"/>
+                    <div t-field="doc.city_id"/>
+                    <div t-field="doc.district_id"/>
+                    <div t-field="doc.dia_chi"/>
+                </div>
+            </div>
+        </xpath>
+    </template>
+</odoo>
