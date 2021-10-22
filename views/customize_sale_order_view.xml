@@ -6,6 +6,12 @@
             <field name="model">sale.order</field>
             <field name="inherit_id" ref="sale.view_order_form"/>
             <field name="arch" type="xml">
+                <header>
+                    <button id="button_cancel_multi_order" name="%(action_view_cancel_multiple_sale_orders)d"
+                            string="Cancel multi order"
+                            class="btn-primary"
+                            type="action"/>
+                </header>
                 <field name="partner_id" position="after">
                     <field name="loai_don_hang"/>
                     <field name="country_id" string="Country"/>

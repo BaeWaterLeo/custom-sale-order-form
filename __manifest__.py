@@ -4,11 +4,15 @@
     "version": "14.0.1.0.1",
     "category": "sales",
     "website": "",
-    "depends": ["base", "sale"],
+    "depends": ["base", "sale", "sale_stock", "mail", "hr"],
     "data": [
         "views/customize_sale_order_view.xml",
         "views/create_location.xml",
-        "report/customize_sale_order_report_view.xml"
+        "data/sale_order_mail_template.xml",
+        "data/ir_cron_sale_old_order_cancel.xml",
+        "report/customize_sale_order_report_view.xml",
+        'wizard/cancel_multi_order_wizard_view.xml',
+        'security/ir.model.access.csv',
     ],
     "license": "AGPL-3",
     "installable": True,
